@@ -3,30 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>José Gnimagnon — Digital Marketer & Graphic Designer</title>
-<meta name="description" content="José Gnimagnon, Digital Marketer & Graphic Designer à Abomey-Calavi (Bénin) : identités visuelles, affiches, social media, Facebook Ads, retouche et sites web.">
+<title>José Gnimagnon — IoT Engineer & Digital Marketer</title>
+<meta name="description" content="José Gnimagnon — IoT Engineer & IoT Product Manager, Digital Marketer & Social Media Manager à Abomey-Calavi (Bénin) : objets connectés, gestion de produit, social media, publicité Meta & Google, e-commerce, design.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="José Gnimagnon — Digital Marketer & Graphic Designer">
-<meta property="og:description" content="Des visuels qui arrêtent le scroll, des campagnes qui se mesurent.">
+<meta property="og:title" content="José Gnimagnon — IoT Engineer & Digital Marketer">
+<meta property="og:description" content="Je fais grandir les marques et parler les objets : IoT, produit, marketing digital et social media.">
 <meta property="og:url" content="https://mrjose-crea.vercel.app/">
 <meta property="og:image" content="https://mrjose-crea.vercel.app/assets/img/rocky-cover.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://mrjose-crea.vercel.app/">
 <meta name="theme-color" content="#0B0B0B" id="themeColor">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23FF4D1A'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-style='italic' font-size='19' fill='%23fff' text-anchor='middle'%3Ej%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%23111'/%3E%3Cg fill='none' stroke='%23F1EFE9' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M29.2 10.8A13 13 0 1 0 33 20H21'/%3E%3Cpath d='M25.3 14.7A7.5 7.5 0 1 0 27.5 20'/%3E%3C/g%3E%3Ccircle cx='20' cy='20' r='3' fill='%23FF4D1A'/%3E%3C/svg%3E">
 <script>(function(){var t;try{t=localStorage.getItem('jg-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t)})()</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <style>
+@font-face{font-family:'Archivo';src:url(assets/fonts/archivo.woff2) format('woff2');font-weight:100 900;font-stretch:62% 125%;font-style:normal;font-display:swap}
+@font-face{font-family:'Bricolage Grotesque';src:url(assets/fonts/bricolage.woff2) format('woff2');font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:'Amp';src:url(assets/fonts/fraunces-italic.woff2) format('woff2');font-style:normal;font-weight:100 900;unicode-range:U+0026;font-display:swap}
+@font-face{font-family:'Fraunces';src:url(assets/fonts/fraunces-italic.woff2) format('woff2');font-weight:100 900;font-style:italic;font-display:swap}
 /* =========================================================
    THEME
    ========================================================= */
 :root{
   --acc:#FF4D1A;--acc2:#FF7A45;--accSoft:rgba(255,77,26,.12);
-  --sans:'Inter Tight',system-ui,-apple-system,sans-serif;
-  --serif:'Instrument Serif',Georgia,serif;
-  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --disp:'Bricolage Grotesque','Archivo',system-ui,sans-serif;
+  --sans:'Amp','Archivo',system-ui,-apple-system,sans-serif;
+  --serif:'Fraunces',Georgia,serif;
+  --lab:'Amp','Archivo',system-ui,sans-serif;
   --ease:cubic-bezier(.16,1,.3,1);
   --max:1360px;--pad:clamp(20px,4vw,56px);
 }
@@ -37,6 +41,7 @@ html{background:var(--bg);-webkit-text-size-adjust:100%;color-scheme:dark light}
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto!important}
 .lenis.lenis-stopped{overflow:hidden}
+main{overflow-x:clip}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background-color .5s,color .5s}
 body.locked{overflow:hidden}
 ::selection{background:var(--acc);color:#fff}
@@ -46,8 +51,10 @@ button,input,textarea{font:inherit;color:inherit;background:none;border:0}
 button{cursor:pointer}
 :focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
 .wrap{width:min(var(--max),100% - var(--pad)*2);margin:0 auto}
-.mono{font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase}
-.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+.mono{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
+h1,h2,h3,h4,.big,.kpi b,.hb b,.mq-t span,.ft-big,.mm a,.md-nx span,.ps .k,.tb .cnt,.r4{font-family:var(--disp);font-optical-sizing:auto}
+h1,h2,.ft-big,.md-in h2{font-weight:600}
+.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em;font-optical-sizing:auto}
 .acc{color:var(--acc)}
 .muted{color:var(--mute)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
@@ -70,19 +77,21 @@ button{cursor:pointer}
 .nav{position:fixed;top:14px;left:0;right:0;z-index:60;pointer-events:none;transition:transform .6s var(--ease)}
 .nav.hide{transform:translateY(-130%)}
 .nav-in{pointer-events:auto;width:min(var(--max),100% - 28px);margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 10px 0 20px;border-radius:18px;background:color-mix(in srgb,var(--bg) 72%,transparent);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:12px;line-height:1}
-.brand .mk{position:relative;width:38px;height:38px;border-radius:12px;background:var(--acc);color:#fff;display:grid;place-items:center;overflow:hidden;flex:none;transition:border-radius .6s var(--ease),transform .6s var(--ease)}
-.brand .mk span{position:absolute;font-family:var(--serif);font-style:italic;font-size:22px;transition:transform .6s var(--ease)}
-.brand .mk span:last-child{font-family:var(--sans);font-style:normal;font-weight:700;font-size:15px;letter-spacing:-.04em;transform:translateY(160%)}
-.brand:hover .mk{border-radius:50%;transform:rotate(-8deg)}
-.brand:hover .mk span:first-child{transform:translateY(-160%)}
-.brand:hover .mk span:last-child{transform:none}
-.brand .nm{display:flex;align-items:baseline;gap:6px;white-space:nowrap}
-.brand .fn{font-weight:600;font-size:18px;letter-spacing:-.035em}
-.brand .ln2{font-size:21px;color:var(--ink2)}
-.brand .rl{font-family:var(--mono);font-size:9.5px;line-height:1.25;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);padding-left:12px;border-left:1px solid var(--line2)}
+.brand{display:flex;align-items:center;gap:11px;line-height:1}
+.brand .mk{width:42px;height:42px;border-radius:13px;background:var(--ink);color:var(--bg);display:grid;place-items:center;flex:none;transition:border-radius .6s var(--ease),transform .6s var(--ease)}
+.brand .mk svg{width:30px;height:30px;overflow:visible}
+.brand .mk .a{fill:none;stroke:currentColor;stroke-width:3.2;stroke-linecap:round}
+.brand .mk .a2{stroke-dasharray:40;stroke-dashoffset:0;transition:stroke-dashoffset .9s var(--ease)}
+.brand .mk .d{fill:var(--acc);transform-box:fill-box;transform-origin:center;transition:transform .5s var(--ease)}
+.brand:hover .mk{border-radius:50%;transform:rotate(-12deg)}
+.brand:hover .mk .a2{animation:sig 1.4s var(--ease) infinite}
+.brand:hover .mk .d{transform:scale(1.35)}
+@keyframes sig{0%{stroke-dashoffset:40}60%,100%{stroke-dashoffset:0}}
+.brand .nm{display:flex;flex-direction:column;gap:1px}
+.brand .fn{font-family:var(--serif);font-style:italic;font-size:16px;line-height:1;color:var(--acc);letter-spacing:-.01em}
+.brand .ln2{font-family:var(--disp);font-weight:700;font-size:19px;line-height:.95;letter-spacing:-.04em}
+.brand .rl{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:8.5px;line-height:1.35;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding-left:12px;margin-left:2px;border-left:1px solid var(--line2)}
 @media (max-width:1180px){.brand .rl{display:none}}
-@media (max-width:420px){.brand .fn{font-size:16px}.brand .ln2{font-size:18px}.brand .mk{width:34px;height:34px}}
 .nlinks{display:flex;gap:2px}
 .nlinks a{position:relative;padding:8px 13px;border-radius:10px;font-size:14px;color:var(--mute);transition:color .3s,background .3s}
 .nlinks a:hover{color:var(--ink)}
@@ -104,7 +113,7 @@ button{cursor:pointer}
 .nav.open .mm{opacity:1;transform:none;visibility:visible}
 .mm a{display:flex;justify-content:space-between;align-items:baseline;padding:14px 12px;border-radius:12px;font-size:26px;letter-spacing:-.03em}
 .mm a:hover{background:var(--surf2)}
-.mm a small{font-family:var(--mono);font-size:11px;color:var(--mute)}
+.mm a small{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:11px;color:var(--mute)}
 
 /* =========================================================
    BUTTONS
@@ -125,30 +134,36 @@ button{cursor:pointer}
 .btn-o:hover{color:var(--bg);border-color:var(--ink)}
 .btn-o:hover::before{transform:none}
 .btn.sm{height:42px;padding:0 18px;font-size:14px}
-.chip{display:inline-flex;align-items:center;gap:8px;height:30px;padding:0 12px;border-radius:20px;border:1px solid var(--line);font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+.chip{display:inline-flex;align-items:center;gap:8px;height:30px;padding:0 12px;border-radius:20px;border:1px solid var(--line);font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+.chip{font-size:10px;letter-spacing:.1em;height:32px;padding:0 13px}
+.roles{display:inline-flex;align-items:center;gap:10px;height:32px;padding:0 14px 0 6px;border-radius:30px;background:var(--ink);color:var(--bg);font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.roles em{font-style:normal;background:var(--acc);color:#fff;height:22px;padding:0 9px;border-radius:20px;display:inline-flex;align-items:center}
+.rw{position:relative;height:1.3em;overflow:hidden;display:inline-block}
+.rwi{display:flex;flex-direction:column;transition:transform .7s var(--ease)}
+.rwi span{height:1.3em;line-height:1.3em;white-space:nowrap}
 .dot{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 0 rgba(34,197,94,.55);animation:pl 2s infinite}
 @keyframes pl{70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
 
 /* =========================================================
    HERO
    ========================================================= */
-.hero{position:relative;min-height:100svh;padding:120px 0 40px;display:flex;flex-direction:column;overflow:hidden}
+.hero{position:relative;min-height:100svh;padding:120px 0 40px;display:flex;flex-direction:column;overflow:visible}
 .hero::before{content:"";position:absolute;width:70vw;height:70vw;max-width:1000px;max-height:1000px;right:-18vw;top:-22vw;border-radius:50%;background:radial-gradient(closest-side,var(--accSoft),transparent);pointer-events:none;filter:blur(10px)}
 .hero-g{position:relative;flex:1;display:grid;grid-template-columns:1.25fr .9fr;gap:40px;align-items:center}
-.hero-top{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
-.hero h1{font-size:clamp(54px,8.4vw,138px);line-height:.92;letter-spacing:-.055em;font-weight:500}
+.hero-top{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:44px}
+.hero h1{font-size:clamp(50px,7.4vw,124px);line-height:.96;letter-spacing:-.03em}
 .hero h1 .it{font-size:1.08em;letter-spacing:-.03em;color:var(--acc);padding-right:.04em}
-.hero .sub{max-width:560px;margin-top:30px;font-size:clamp(16px,1.35vw,19px);color:var(--mute)}
+.hero .sub{max-width:500px;margin-top:40px;font-size:clamp(16px,1.3vw,18px);line-height:1.7;color:var(--mute)}
 .hero .sub b{color:var(--ink);font-weight:500}
-.hero .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.hero .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:44px}
 .deck{position:relative;height:min(620px,64vh);aspect-ratio:.72;justify-self:center;margin-right:4%}
 .dk{position:absolute;inset:0;border-radius:22px;overflow:hidden;background:var(--surf);box-shadow:var(--shadow);cursor:pointer;transition:transform 1s var(--ease),filter .8s,opacity .8s;will-change:transform;border:1px solid var(--line)}
 .dk img{width:100%;height:100%;object-fit:cover;filter:var(--img)}
 .dk .cap{position:absolute;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;align-items:center;padding:11px 14px;border-radius:14px;background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:14px;font-weight:500;opacity:0;transform:translateY(8px);transition:.6s var(--ease)}
 .dk.top .cap{opacity:1;transform:none}
-.dk .cap span{font-family:var(--mono);font-size:11px;color:var(--mute);font-weight:400}
-.deck-n{position:absolute;right:-6px;top:-34px;font-family:var(--mono);font-size:12px;color:var(--mute)}
-.hero-b{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:54px;border-top:1px solid var(--line)}
+.dk .cap span{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:11px;color:var(--mute);font-weight:400}
+.deck-n{position:absolute;right:-6px;top:-34px;font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:12px;color:var(--mute)}
+.hero-b{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:80px;border-top:1px solid var(--line)}
 .hb{padding:20px 20px 0 0}
 .hb+.hb{padding-left:20px;border-left:1px solid var(--line)}
 .hb b{display:block;font-size:clamp(26px,2.6vw,40px);font-weight:500;letter-spacing:-.04em;line-height:1.1}
@@ -169,8 +184,8 @@ button{cursor:pointer}
    ========================================================= */
 .sec{position:relative;padding:clamp(90px,11vw,150px) 0}
 .sh{display:grid;grid-template-columns:auto 1fr auto;align-items:end;gap:30px;margin-bottom:56px}
-.sh .no{font-family:var(--mono);font-size:12px;color:var(--mute);padding-bottom:12px}
-.sh h2{font-size:clamp(44px,6.4vw,104px);line-height:.92;letter-spacing:-.05em;font-weight:500}
+.sh .no{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:12px;color:var(--mute);padding-bottom:12px}
+.sh h2{font-size:clamp(44px,6.4vw,104px);line-height:.92;letter-spacing:-.035em;font-weight:500}
 .sh h2 .it{color:var(--acc)}
 .sh p{max-width:340px;color:var(--mute);font-size:15px;padding-bottom:10px}
 
@@ -180,9 +195,9 @@ button{cursor:pointer}
 .hs{position:relative}
 .hs-pin{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
 .hs-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:34px}
-.hs-head h2{font-size:clamp(44px,6.4vw,104px);line-height:.92;letter-spacing:-.05em;font-weight:500}
+.hs-head h2{font-size:clamp(44px,6.4vw,104px);line-height:.92;letter-spacing:-.035em;font-weight:500}
 .hs-head h2 .it{color:var(--acc)}
-.hs-prog{display:flex;align-items:center;gap:14px;font-family:var(--mono);font-size:12px;color:var(--mute);padding-bottom:12px}
+.hs-prog{display:flex;align-items:center;gap:14px;font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:12px;color:var(--mute);padding-bottom:12px}
 .hs-prog i{display:block;width:140px;height:2px;background:var(--line);position:relative;overflow:hidden}
 .hs-prog i b{position:absolute;inset:0;background:var(--acc);transform-origin:0 50%;transform:scaleX(0)}
 .hs-track{display:flex;gap:22px;padding-left:max(var(--pad),calc((100vw - var(--max))/2));will-change:transform}
@@ -197,7 +212,7 @@ button{cursor:pointer}
 .wk .go svg{width:20px;height:20px}
 .wk .meta{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:18px 4px 0}
 .wk h3{font-size:clamp(24px,2.4vw,36px);font-weight:500;letter-spacing:-.035em}
-.wk .meta span{font-family:var(--mono);font-size:11.5px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em;text-align:right}
+.wk .meta span{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:11.5px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em;text-align:right}
 .wk-end{flex:none;width:min(34vw,420px);display:flex;flex-direction:column;justify-content:center;gap:22px;padding-right:var(--pad)}
 .wk-end p{font-size:clamp(26px,2.6vw,40px);letter-spacing:-.04em;line-height:1.05}
 
@@ -208,13 +223,13 @@ button{cursor:pointer}
 .flt{height:38px;padding:0 16px;border-radius:30px;border:1px solid var(--line);font-size:14px;color:var(--mute);transition:all .4s var(--ease)}
 .flt:hover{color:var(--ink);border-color:var(--line2)}
 .flt.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.flt sup{font-family:var(--mono);font-size:9px;margin-left:3px}
+.flt sup{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:9px;margin-left:3px}
 .idx{border-top:1px solid var(--line)}
 .row{display:grid;grid-template-columns:70px 1.4fr 1fr 1fr 40px;gap:20px;align-items:center;padding:26px 6px;border-bottom:1px solid var(--line);cursor:pointer;position:relative;transition:padding .6s var(--ease),opacity .5s,color .3s}
 .row::before{content:"";position:absolute;inset:0;background:var(--surf2);transform:scaleY(0);transform-origin:50% 100%;transition:transform .6s var(--ease);z-index:-1}
 .row:hover{padding-left:22px;padding-right:22px}
 .row:hover::before{transform:none}
-.row .n{font-family:var(--mono);font-size:12px;color:var(--mute)}
+.row .n{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:12px;color:var(--mute)}
 .row h3{font-size:clamp(24px,3vw,44px);font-weight:500;letter-spacing:-.04em;line-height:1.05}
 .row:hover h3{color:var(--acc)}
 .row .c,.row .t{font-size:14px;color:var(--mute)}
@@ -236,7 +251,7 @@ button{cursor:pointer}
 .card .lbl{display:flex;justify-content:space-between;gap:12px;margin-bottom:18px}
 .chart svg{width:100%;height:auto;display:block;overflow:visible}
 .chart .grid line{stroke:var(--line);stroke-dasharray:3 5}
-.chart .axis text{fill:var(--mute);font-family:var(--mono);font-size:11px}
+.chart .axis text{fill:var(--mute);font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:11px}
 .chart .area{fill:url(#ga);opacity:0;transition:opacity 1.2s .6s}
 .chart.in .area{opacity:1}
 .chart .curve{fill:none;stroke:var(--acc);stroke-width:3;stroke-linecap:round;stroke-dasharray:1200;stroke-dashoffset:1200;transition:stroke-dashoffset 2.2s var(--ease)}
@@ -244,7 +259,7 @@ button{cursor:pointer}
 .chart .pt circle{fill:var(--bg);stroke:var(--acc);stroke-width:3;transform-box:fill-box;transform-origin:center;transform:scale(0);transition:transform .6s var(--ease)}
 .chart.in .pt circle{transform:scale(1)}
 .chart .pt text{fill:var(--ink);font-family:var(--sans);font-size:15px;font-weight:600;opacity:0;transition:opacity .6s}
-.chart .pt text.s{fill:var(--mute);font-family:var(--mono);font-size:10.5px;font-weight:400}
+.chart .pt text.s{fill:var(--mute);font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:10.5px;font-weight:400}
 .chart.in .pt text{opacity:1}
 .big{font-size:clamp(44px,5vw,76px);font-weight:500;letter-spacing:-.05em;line-height:1}
 .kpis{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -258,7 +273,7 @@ button{cursor:pointer}
 .shot{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:var(--surf);cursor:zoom-in;aspect-ratio:3/4;position:relative}
 .shot img{width:100%;height:100%;object-fit:cover;object-position:50% 0;transition:transform 1s var(--ease)}
 .shot:hover img{transform:scale(1.04)}
-.shot span{position:absolute;left:10px;bottom:10px;padding:6px 10px;border-radius:10px;background:var(--bg);color:var(--ink);font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.04em}
+.shot span{position:absolute;left:10px;bottom:10px;padding:6px 10px;border-radius:10px;background:var(--bg);color:var(--ink);font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em}
 .note{font-size:12.5px;color:var(--mute);margin-top:14px}
 
 /* =========================================================
@@ -281,18 +296,23 @@ button{cursor:pointer}
 .ba .hd{position:absolute;top:0;bottom:0;left:var(--p);width:2px;margin-left:-1px;background:#fff;pointer-events:none}
 .ba .hd i{position:absolute;top:50%;left:50%;width:58px;height:58px;margin:-29px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35)}
 .ba .hd svg{width:24px;height:24px}
-.ba .t1,.ba .t2{position:absolute;top:14px;padding:7px 12px;border-radius:10px;background:rgba(0,0,0,.55);color:#fff;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;pointer-events:none}
+.ba .t1,.ba .t2{position:absolute;top:14px;padding:7px 12px;border-radius:10px;background:rgba(0,0,0,.55);color:#fff;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.05em;pointer-events:none}
 .ba .t1{left:14px}.ba .t2{right:14px}
 .ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
 
 /* =========================================================
    SERVICES
    ========================================================= */
+.sv-g{display:grid;grid-template-columns:1.5fr .72fr;gap:clamp(24px,4vw,56px);align-items:start}
+.sv-pos{position:sticky;top:96px;margin:0;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:var(--surf);box-shadow:var(--shadow);transform:perspective(1100px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));transition:transform .8s var(--ease)}
+.sv-pos.tilting{transition:transform .15s linear}
+.sv-pos img{width:100%;height:auto}
+.sv-pos figcaption{display:flex;justify-content:space-between;gap:10px;padding:13px 16px;font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);border-top:1px solid var(--line)}
 .svs{border-top:1px solid var(--line)}
 .sv{border-bottom:1px solid var(--line)}
 .sv>button{width:100%;display:grid;grid-template-columns:70px 1fr auto;gap:20px;align-items:center;padding:30px 4px;text-align:left}
-.sv .n{font-family:var(--mono);font-size:12px;color:var(--mute)}
-.sv h3{font-size:clamp(28px,3.6vw,58px);font-weight:500;letter-spacing:-.045em;line-height:1;transition:color .4s,transform .6s var(--ease)}
+.sv .n{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:12px;color:var(--mute)}
+.sv h3{font-size:clamp(26px,3.1vw,48px);font-weight:500;letter-spacing:-.045em;line-height:1;transition:color .4s,transform .6s var(--ease)}
 .sv>button:hover h3{transform:translateX(10px)}
 .sv.on h3{color:var(--acc)}
 .sv .pm{width:48px;height:48px;border-radius:50%;border:1px solid var(--line2);position:relative;transition:.5s var(--ease)}
@@ -304,12 +324,14 @@ button{cursor:pointer}
 .sv .bd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .7s var(--ease)}
 .sv.on .bd{grid-template-rows:1fr}
 .sv .bd>div{overflow:hidden}
-.sv .in{display:grid;grid-template-columns:70px 1fr 1fr 1.1fr;gap:20px;padding:0 4px 34px}
+.sv .in{display:grid;grid-template-columns:70px 1fr 1fr;gap:18px 22px;padding:0 4px 34px}
+.sv .in .thumbs,.sv .in .stk{grid-column:2/-1}
+.stk{display:flex;flex-wrap:wrap;gap:7px}.stk span{padding:6px 11px;border-radius:9px;background:var(--surf);border:1px solid var(--line);font-size:13px}
 .sv .in p{color:var(--mute);font-size:15.5px}
 .sv .in ul{list-style:none;display:grid;gap:6px;font-size:15px}
 .sv .in ul li::before{content:"→ ";color:var(--acc)}
 .sv .thumbs{display:flex;gap:8px}
-.sv .thumbs img{width:33%;aspect-ratio:1;object-fit:cover;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:transform .5s var(--ease)}
+.sv .thumbs img{width:calc(33.3% - 6px);max-width:140px;aspect-ratio:1;object-fit:cover;border-radius:12px;border:1px solid var(--line);cursor:pointer;transition:transform .5s var(--ease)}
 .sv .thumbs img:hover{transform:translateY(-6px) rotate(-2deg)}
 
 /* =========================================================
@@ -317,23 +339,36 @@ button{cursor:pointer}
    ========================================================= */
 .ab-g{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(30px,5vw,80px);align-items:start}
 .ab-img{position:sticky;top:100px;border-radius:26px;overflow:hidden;aspect-ratio:4/5;background:var(--surf);border:1px solid var(--line)}
-.ab-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .8s,transform 1.4s var(--ease),filter .8s}
-.ab-img .a1{filter:grayscale(1) contrast(1.05)}
-.ab-img .a2{opacity:0;object-position:50% 30%;transform:scale(1.08)}
-.ab-img:hover .a2,.ab-img.flip .a2{opacity:1;transform:none}
-.ab-img .tag{position:absolute;left:14px;right:14px;bottom:14px;display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-radius:14px;background:color-mix(in srgb,var(--bg) 72%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:14px}
-.ab-img .tag span{font-family:var(--mono);font-size:11px;color:var(--mute)}
+.ab-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 25%;clip-path:inset(100% 0 0 0);transform:scale(1.12);transition:clip-path 1.1s var(--ease),transform 1.5s var(--ease)}
+.ab-img img.on{clip-path:inset(0 0 0 0);transform:none;z-index:2}
+.ab-img img.prev{clip-path:inset(0 0 0 0);transform:none;z-index:1}
+.bars{position:absolute;top:12px;left:12px;right:12px;display:flex;gap:6px;z-index:4}
+.bars i{flex:1;height:3px;border-radius:3px;background:rgba(128,128,128,.4);overflow:hidden}
+.bars b{display:block;height:100%;width:0;background:var(--acc)}
+.bars i.done b{width:100%}
+.bars i.cur b{animation:fill 4.5s linear forwards}
+.ab-img:hover .bars i.cur b{animation-play-state:paused}
+@keyframes fill{to{width:100%}}
+.abn{position:absolute;top:0;bottom:0;width:50%;z-index:3;cursor:pointer}
+.ab-p0{left:0;cursor:w-resize}.ab-n0{right:0;cursor:e-resize}
+.ab-img .tag{z-index:4}
+.ab-img .tag span{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:10px;letter-spacing:.08em;color:var(--mute)}
+.roles4{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:28px}
+.r4{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:16px;background:var(--surf);border:1px solid var(--line);font-size:17px;font-weight:600;letter-spacing:-.02em;transition:border-color .4s,transform .5s var(--ease)}
+.r4:hover{border-color:var(--acc);transform:translateY(-3px)}
+.r4 i{width:38px;height:38px;border-radius:12px;background:var(--accSoft);color:var(--acc);display:grid;place-items:center;flex:none}
+.r4 svg{width:20px;height:20px}
 .ab-lead{font-size:clamp(24px,2.6vw,40px);line-height:1.15;letter-spacing:-.035em}
 .ab-lead .it{color:var(--acc)}
 .ab-p{color:var(--mute);margin-top:24px;max-width:620px}
 .tl{margin-top:44px;border-top:1px solid var(--line)}
 .tl-r{display:grid;grid-template-columns:110px 1fr auto;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.tl-r .y{font-family:var(--mono);font-size:12px;color:var(--mute)}
+.tl-r .y{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:12px;color:var(--mute)}
 .tl-r b{font-weight:500;font-size:18px;letter-spacing:-.02em;display:block}
 .tl-r small{color:var(--mute);font-size:14px}
-.tl-r .k{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);border:1px solid var(--line);padding:4px 9px;border-radius:20px;white-space:nowrap}
+.tl-r .k{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);border:1px solid var(--line);padding:4px 9px;border-radius:20px;white-space:nowrap}
 .tools{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:40px}
-.tools h4{font-family:var(--mono);font-weight:400;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin-bottom:14px}
+.tools h4{font-family:var(--lab);font-stretch:125%;font-weight:600;font-weight:400;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);margin-bottom:14px}
 .tg{display:flex;flex-wrap:wrap;gap:8px}
 .tg span{padding:8px 13px;border-radius:10px;background:var(--surf);border:1px solid var(--line);font-size:14px;transition:background .3s,color .3s,border-color .3s}
 .tg span:hover{background:var(--acc);color:#fff;border-color:var(--acc)}
@@ -348,6 +383,27 @@ button{cursor:pointer}
 .ps h3{font-size:28px;font-weight:500;letter-spacing:-.035em;margin-top:auto}
 .ps p{color:var(--mute);font-size:15px;margin-top:12px}
 .ps::after{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;border:1px solid var(--line)}
+
+/* =========================================================
+   TOOLBOX
+   ========================================================= */
+.tb-g{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:16px;align-items:start}
+.tb{position:relative;background:var(--surf);border:1px solid var(--line);border-radius:26px;padding:28px;display:flex;flex-direction:column;gap:22px;overflow:hidden}
+.tb.ac{background:var(--acc);border-color:var(--acc);color:#fff}
+.tb .tbh{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.tb .ic{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:var(--accSoft);color:var(--acc)}
+.tb.ac .ic{background:rgba(255,255,255,.16);color:#fff}
+.tb .ic svg{width:24px;height:24px}
+.tb .cnt{font-size:72px;line-height:.8;letter-spacing:-.05em;font-weight:600}
+.tb h3{font-size:26px;font-weight:600;letter-spacing:-.03em;line-height:1.05}
+.tb h3 small{display:block;margin-top:8px;font-family:var(--sans);font-size:14px;font-weight:400;letter-spacing:0;opacity:.7}
+.tb .ch{display:flex;flex-wrap:wrap;gap:7px}
+.tb .ch span{padding:7px 11px;border-radius:10px;border:1px solid var(--line);background:var(--bg);font-size:13.5px;opacity:0;transform:translateY(12px) scale(.94);transition:opacity .5s,transform .7s var(--ease),background .3s,color .3s,border-color .3s}
+.tb.in .ch span{opacity:1;transform:none}
+.tb .ch span:hover{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tb.ac .ch span{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.28);color:#fff}
+.tb.ac .ch span:hover{background:#fff;color:var(--acc)}
+.tb::after{content:"";position:absolute;right:-70px;bottom:-70px;width:200px;height:200px;border-radius:50%;border:1px solid currentColor;opacity:.12}
 
 /* =========================================================
    FAQ
@@ -377,8 +433,8 @@ button{cursor:pointer}
 .ct-ls{display:grid;gap:4px;margin-top:34px}
 .ct-ls a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid color-mix(in srgb,var(--bg) 18%,transparent);font-size:clamp(16px,1.5vw,20px);transition:padding .5s var(--ease),color .3s}
 .ct-ls a:hover{padding-left:10px;color:var(--acc)}
-.ct-ls a small{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;opacity:.6}
-.fm label{display:block;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;opacity:.65;margin-bottom:10px}
+.ct-ls a small{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.05em;opacity:.6}
+.fm label{display:block;font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.05em;opacity:.65;margin-bottom:10px}
 .fm .f{margin-bottom:22px}
 .fm input,.fm textarea{width:100%;padding:14px 0;border-bottom:1px solid color-mix(in srgb,var(--bg) 28%,transparent);font-size:18px;color:var(--bg);resize:none;transition:border-color .3s}
 .fm input:focus,.fm textarea:focus{outline:none;border-color:var(--acc)}
@@ -425,7 +481,7 @@ button{cursor:pointer}
 .md-top .lead{font-size:clamp(17px,1.5vw,21px);color:var(--ink2)}
 .md-meta{display:grid;gap:0;border-top:1px solid var(--line)}
 .md-meta div{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px}
-.md-meta small{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
+.md-meta small{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
 .md-cv{border-radius:24px;overflow:hidden;margin:40px 0;background:var(--surf);border:1px solid var(--line);max-height:620px}
 .md-cv img,.md-cv video{width:100%;max-height:620px;object-fit:cover;object-position:50% 15%;animation:cv 1.5s var(--ease)}
 @keyframes cv{from{transform:scale(1.12);filter:blur(6px)}}
@@ -433,7 +489,7 @@ button{cursor:pointer}
 .md-bd h4{font-size:24px;font-weight:500;letter-spacing:-.03em}
 .md-bd ul{list-style:none;display:grid;gap:10px}
 .md-bd li{display:grid;grid-template-columns:28px 1fr;color:var(--ink2);font-size:16px}
-.md-bd li span{font-family:var(--mono);font-size:11px;color:var(--acc);padding-top:4px}
+.md-bd li span{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:11px;color:var(--acc);padding-top:4px}
 .md-k{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:24px}
 .md-k div{background:var(--surf);border:1px solid var(--line);border-radius:16px;padding:16px}
 .md-k b{display:block;font-size:30px;font-weight:500;letter-spacing:-.04em}
@@ -444,7 +500,7 @@ button{cursor:pointer}
 .gal img,.gal video{width:100%;height:auto;cursor:zoom-in;transition:transform 1s var(--ease)}
 .gal figure:hover img{transform:scale(1.03)}
 .md-nx{display:block;margin-top:60px;padding-top:40px;border-top:1px solid var(--line);cursor:pointer;text-align:left;width:100%}
-.md-nx small{font-family:var(--mono);font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em}
+.md-nx small{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:12px;color:var(--mute);text-transform:uppercase;letter-spacing:.05em}
 .md-nx span{display:flex;align-items:center;gap:20px;font-size:clamp(40px,7vw,110px);line-height:1;letter-spacing:-.055em;font-weight:500;margin-top:10px;transition:color .4s}
 .md-nx span svg{width:.6em;height:.6em;transition:transform .6s var(--ease)}
 .md-nx:hover span{color:var(--acc)}
@@ -459,7 +515,7 @@ button{cursor:pointer}
 .lbx button:hover{background:var(--acc);color:#fff;border-color:var(--acc)}
 .lbx button svg{width:20px;height:20px}
 .lbx .x{top:18px;right:18px}.lbx .p{left:16px;top:50%;margin-top:-26px}.lbx .n{right:16px;top:50%;margin-top:-26px}
-.lbx .c{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:12px;color:var(--mute)}
+.lbx .c{position:absolute;bottom:22px;left:0;right:0;text-align:center;font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:12px;color:var(--mute)}
 
 /* progress */
 .prog{position:fixed;left:0;top:0;height:2px;width:100%;z-index:70;background:var(--acc);transform-origin:0 50%;transform:scaleX(0)}
@@ -472,6 +528,10 @@ button{cursor:pointer}
   .deck{height:auto;width:min(420px,78vw);margin:10px auto 0;aspect-ratio:.72}
   .res-g,.ba-g,.ab-g,.faq-g,.ct-g,.md-top,.md-bd{grid-template-columns:1fr}
   .ab-img{position:relative;top:0;max-width:520px}
+  .sv-g{grid-template-columns:1fr}
+  .sv-pos{position:relative;top:0;max-width:440px;order:-1}
+  .tb-g{grid-template-columns:1fr 1fr}
+  .tb.ac{grid-column:1/-1}
   .ba.sq{margin:0 auto}
   .sv .in{grid-template-columns:1fr 1fr}
   .sv .in>span{display:none}
@@ -505,6 +565,10 @@ button{cursor:pointer}
   .sv>button{grid-template-columns:36px 1fr auto;gap:12px;padding:24px 2px}
   .sv .pm{width:40px;height:40px}
   .sv .in{grid-template-columns:1fr;padding-bottom:26px}
+  .sv .in .thumbs,.sv .in .stk{grid-column:auto}
+  .tb-g{grid-template-columns:1fr}
+  .roles4{grid-template-columns:1fr}
+  .hero-top .chip:last-child{display:none}
   .tl-r{grid-template-columns:1fr auto}
   .tl-r .y{grid-column:1/-1}
   .md-p{inset:8px 0 0;border-radius:22px 22px 0 0}
@@ -536,6 +600,12 @@ button{cursor:pointer}
   <symbol id="r" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></symbol>
   <symbol id="lr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/></symbol>
   <symbol id="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></symbol>
+  <symbol id="box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 2.5 20.5 7v10L12 21.5 3.5 17V7z"/><path d="M3.5 7 12 11.5 20.5 7M12 11.5v10"/></symbol>
+  <symbol id="mega" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"><path d="M3 10v4h4l7 4V6L7 10z"/><path d="M17.5 9a4 4 0 0 1 0 6M7 14l1.5 5h2.5l-1-4.5"/></symbol>
+  <symbol id="chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 5h12v8H9l-5 4z"/><path d="M16 9h4v8l-3-2.5h-5V13"/></symbol>
+  <symbol id="pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
   <symbol id="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
   <symbol id="moon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 14.3A8.5 8.5 0 0 1 9.7 3.5a8.5 8.5 0 1 0 10.8 10.8z"/></symbol>
   <symbol id="wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3z"/></symbol>
@@ -544,7 +614,7 @@ button{cursor:pointer}
 <!-- ================= NAV ================= -->
 <header class="nav" id="nav">
   <div class="nav-in">
-    <a href="#top" class="brand" data-go aria-label="José Gnimagnon — accueil"><span class="mk" aria-hidden="true"><span>J</span><span>G</span></span><span class="nm"><span class="fn">José</span><span class="ln2 it">Gnimagnon</span></span><span class="rl" aria-hidden="true">Design<br>&amp; Marketing</span></a>
+    <a href="#top" class="brand" data-go aria-label="José Gnimagnon — accueil"><span class="mk" aria-hidden="true"><svg viewBox="0 0 40 40"><path class="a" d="M29.2 10.8A13 13 0 1 0 33 20H21"/><path class="a a2" d="M25.3 14.7A7.5 7.5 0 1 0 27.5 20"/><circle class="d" cx="20" cy="20" r="3"/></svg></span><span class="nm"><span class="fn">José</span><span class="ln2">Gnimagnon</span></span><span class="rl" aria-hidden="true">IoT Engineer<br>&amp; Marketer</span></a>
     <nav class="nlinks" id="nl">
       <a href="#travaux" data-go data-s="travaux">Travaux</a>
       <a href="#resultats" data-go data-s="resultats">Résultats</a>
@@ -572,9 +642,9 @@ button{cursor:pointer}
 <section class="hero wrap" id="hero">
   <div class="hero-g">
     <div>
-      <div class="hero-top rv"><span class="chip"><i class="dot"></i>Disponible — nouveaux projets</span><span class="chip">Abomey-Calavi · <span id="clk">--:--</span></span></div>
+      <div class="hero-top rv"><span class="roles"><em>Je suis</em><span class="rw"><span class="rwi" id="rwi"><span>IoT Engineer</span><span>IoT Product Manager</span><span>Digital Marketer</span><span>Social Media Manager</span><span>IoT Engineer</span></span></span></span><span class="chip"><i class="dot"></i>Disponible</span><span class="chip">Abomey-Calavi — <span id="clk">--:--</span></span></div>
       <h1><span class="ln"><span>Des visuels</span></span><span class="ln"><span>qui <span class="it">arrêtent</span></span></span><span class="ln"><span>le scroll.</span></span></h1>
-      <p class="sub rv">Je suis <b>José Gnimagnon</b>, Digital Marketer &amp; Graphic Designer. Identités visuelles, affiches, gestion de pages et campagnes Facebook Ads : je crée pour que votre marque se voie, et je mesure pour qu’elle vende.</p>
+      <p class="sub rv"><b>José Gnimagnon</b> — IoT Engineer &amp; IoT Product Manager, Digital Marketer &amp; Social Media Manager. Des objets connectés qui fonctionnent, des marques qui se voient : musique, e-commerce et bien d’autres.</p>
       <div class="btns rv"><a href="#travaux" class="btn btn-a" data-go data-mag><span class="lb"><span>Voir les travaux</span><span>Voir les travaux</span></span><svg><use href="#ar"/></svg></a><a href="#contact" class="btn btn-o" data-go data-mag><span class="lb"><span>Me contacter</span><span>Me contacter</span></span></a></div>
     </div>
     <div class="deck rv" id="deck" aria-label="Aperçu des projets"><span class="deck-n" id="deckN">01 / 07</span></div>
@@ -583,7 +653,7 @@ button{cursor:pointer}
     <div class="hb"><b data-n="163" data-s="K">0</b><span>personnes atteintes par une campagne</span></div>
     <div class="hb"><b>+<span data-n="2237">0</span> %</b><span>de portée sur une page en 28 jours</span></div>
     <div class="hb"><b data-n="12" id="nProj">0</b><span>projets présentés</span></div>
-    <div class="hb"><b class="it">Photoshop</b><span>Illustrator · InDesign · WordPress</span></div>
+    <div class="hb"><b><span data-n="45" id="nTools">0</span>+</b><span>outils maîtrisés, du capteur à la campagne</span></div>
   </div>
 </section>
 
@@ -658,31 +728,40 @@ button{cursor:pointer}
 
 <!-- ================= SERVICES ================= -->
 <section class="sec wrap" id="services">
-  <div class="sh"><span class="no">(04)</span><h2 class="rv">Ce que je <span class="it">fais</span></h2><p class="rv">Du premier visuel à la campagne mesurée : un seul interlocuteur.</p></div>
-  <div class="svs" id="svs"></div>
+  <div class="sh"><span class="no">(04)</span><h2 class="rv">Ce que je <span class="it">fais</span></h2><p class="rv">Deux pôles, un seul interlocuteur : le marketing qui fait vendre et l’IoT qui fait fonctionner.</p></div>
+  <div class="sv-g"><div class="svs" id="svs"></div><figure class="sv-pos rv" id="svPos"><img src="assets/img/services-poster.webp" alt="Affiche « Our Services » réalisée par José Gnimagnon" loading="lazy"><figcaption><span>Affiche « Our Services »</span><span>Design : José G.</span></figcaption></figure></div>
 </section>
 
 <!-- ================= PROCESS ================= -->
 <section class="sec wrap" style="padding-top:0">
   <div class="pr">
-    <div class="ps rv"><span class="k">i.</span><h3>Comprendre</h3><p>Un échange sur WhatsApp, en appel ou en rendez-vous pour cerner votre produit, votre cible et l’objectif : notoriété, ventes ou lancement.</p></div>
-    <div class="ps rv"><span class="k">ii.</span><h3>Créer &amp; ajuster</h3><p>Des pistes visuelles sur Photoshop, Illustrator, InDesign ou Canva, ajustées avec vous jusqu’à validation.</p></div>
-    <div class="ps rv"><span class="k">iii.</span><h3>Diffuser &amp; mesurer</h3><p>Fichiers HD prêts à publier ou imprimer, et si vous le souhaitez : publication, animation de page et campagne suivie chiffres à l’appui.</p></div>
+    <div class="ps rv"><span class="k">i.</span><h3>Comprendre</h3><p>Un échange sur WhatsApp, en appel ou en rendez-vous pour cerner votre produit, vos utilisateurs et l’objectif : notoriété, ventes, lancement ou prototype.</p></div>
+    <div class="ps rv"><span class="k">ii.</span><h3>Créer &amp; prototyper</h3><p>Visuels, campagnes ou prototype connecté : je produis, on teste, on ajuste ensemble jusqu’à validation.</p></div>
+    <div class="ps rv"><span class="k">iii.</span><h3>Lancer &amp; mesurer</h3><p>Publication, campagne ou déploiement, puis suivi chiffré : portée, conversions ou données des capteurs.</p></div>
   </div>
 </section>
 
 <!-- ================= ABOUT ================= -->
 <section class="sec wrap" id="apropos">
-  <div class="sh"><span class="no">(05)</span><h2 class="rv">À <span class="it">propos</span></h2><p class="rv">Formé au marketing digital, passionné de design, étudiant en informatique.</p></div>
+  <div class="sh"><span class="no">(05)</span><h2 class="rv">À <span class="it">propos</span></h2><p class="rv">IoT, produit, marketing digital et social media : deux mondes que je relie.</p></div>
   <div class="ab-g">
     <div class="ab-img" id="abImg">
-      <img class="a1" src="assets/img/jose-portrait.webp" alt="Portrait de José Gnimagnon" loading="lazy">
-      <img class="a2" src="assets/img/jose-ghibli.webp" alt="Portrait illustré de José" loading="lazy">
-      <div class="tag"><b>José Gnimagnon</b><span id="abHint">survolez ✦</span></div>
+      <div class="bars" aria-hidden="true"><i class="cur"><b></b></i><i><b></b></i><i><b></b></i></div>
+      <img class="on" src="assets/img/jose-photo.webp" alt="José Gnimagnon">
+      <img src="assets/img/jose-portrait.webp" alt="José Gnimagnon, portrait" loading="lazy">
+      <img src="assets/img/jose-ghibli.webp" alt="Portrait illustré de José" loading="lazy">
+      <button class="abn ab-p0" aria-label="Photo précédente"></button><button class="abn ab-n0" aria-label="Photo suivante"></button>
+      <div class="tag"><b>José Gnimagnon</b><span id="abC">01 / 03</span></div>
     </div>
     <div>
-      <p class="ab-lead rv">J’allie la <span class="it">créativité</span> d’un designer et la rigueur d’un marketeur : chaque visuel a un objectif, chaque campagne a des <span class="it">chiffres</span>.</p>
-      <p class="ab-p rv">Basé à Abomey-Calavi, au Bénin, j’accompagne commerces, marques et entrepreneurs : affiches produits, identités visuelles, gestion de pages Facebook, campagnes publicitaires, mise en page d’ebooks et sites WordPress. Je travaille aussi à distance.</p>
+      <p class="ab-lead rv">Deux métiers, une même obsession : des <span class="it">résultats</span> qu’on peut mesurer, qu’il s’agisse d’un capteur connecté ou d’une campagne <span class="it">publicitaire</span>.</p>
+      <p class="ab-p rv">Étudiant en Systèmes embarqués &amp; IoT à l’IFRI (Université d’Abomey-Calavi) et formé au marketing digital, je conçois et pilote des produits connectés, du prototype ESP32 au tableau de bord Node-RED. En parallèle, j’accompagne les marques sur les réseaux sociaux et en publicité : projets musicaux, boutiques e-commerce, commerces locaux et bien d’autres. Basé à Abomey-Calavi, je travaille aussi à distance.</p>
+      <div class="roles4 rv">
+        <div class="r4"><i><svg><use href="#cpu"/></svg></i>IoT Engineer</div>
+        <div class="r4"><i><svg><use href="#box"/></svg></i>IoT Product Manager</div>
+        <div class="r4"><i><svg><use href="#mega"/></svg></i>Digital Marketer</div>
+        <div class="r4"><i><svg><use href="#chat"/></svg></i>Social Media Manager</div>
+      </div>
       <div class="tl rv">
         <div class="tl-r"><span class="y">2025</span><div><b>Social Media Manager</b><small>DFEM Solutions</small></div><span class="k">Expérience</span></div>
         <div class="tl-r"><span class="y">2024 — 2025</span><div><b>Social Media &amp; Ads Manager</b><small>Rocky Store Tech</small></div><span class="k">Expérience</span></div>
@@ -690,18 +769,21 @@ button{cursor:pointer}
         <div class="tl-r"><span class="y">Depuis 2022</span><div><b>Licence Systèmes embarqués &amp; IoT</b><small>IFRI — Université d’Abomey-Calavi</small></div><span class="k">Études</span></div>
         <div class="tl-r"><span class="y">Depuis 2022</span><div><b>Licence d’Anglais</b><small>FLLAC — Université d’Abomey-Calavi</small></div><span class="k">Études</span></div>
       </div>
-      <div class="tools">
-        <div class="rv"><h4>Outils</h4><div class="tg"><span>Photoshop</span><span>Illustrator</span><span>InDesign</span><span>Canva</span><span>CapCut</span><span>Uizard</span><span>WordPress</span><span>HTML / CSS</span></div></div>
-        <div class="rv"><h4>Marketing</h4><div class="tg"><span>Meta Business Suite</span><span>Facebook Ads</span><span>Pixel Meta</span><span>Gestion de pages</span><span>Copywriting</span></div></div>
-      </div>
+    </div>
     </div>
   </div>
+</section>
+
+<!-- ================= TOOLBOX ================= -->
+<section class="sec wrap" id="outils" style="padding-top:0">
+  <div class="sh"><span class="no">(06)</span><h2 class="rv">Boîte à <span class="it">outils</span></h2><p class="rv"><b id="tbTot">45</b> outils maîtrisés au quotidien, du microcontrôleur au gestionnaire de publicités.</p></div>
+  <div class="tb-g" id="tbG"></div>
 </section>
 
 <!-- ================= FAQ ================= -->
 <section class="sec wrap" id="faq">
   <div class="faq-g">
-    <div class="sh" style="grid-template-columns:1fr;margin:0"><span class="no">(06)</span><h2 class="rv">Questions <span class="it">fréquentes</span></h2></div>
+    <div class="sh" style="grid-template-columns:1fr;margin:0"><span class="no">(07)</span><h2 class="rv">Questions <span class="it">fréquentes</span></h2></div>
     <div id="faqL"></div>
   </div>
 </section>
@@ -818,17 +900,27 @@ const FEAT=['rocky-store','mycar-plus','d-wen','retouche','ebooks'];
 const DECK=['zed-open','zed-bf1','zed-bf2','zed-bf3','mycar-logo','eb-artsed','fruinas-affiche'];
 const DECKID=['zed','zed','zed','zed','mycar-plus','ebooks','fruinas'];
 const SV=[
- {t:'Design graphique',p:'Des visuels qui attirent l’œil et font comprendre l’offre en une seconde, prêts à publier ou à imprimer.',l:['Affiches produits & promos','Campagnes saisonnières (Black Friday…)','Visuels réseaux sociaux','Couvertures de pages'],im:['zed-bf2','rocky-wifi','fruinas-affiche'],o:['zed','rocky-store','fruinas']},
- {t:'Identité visuelle',p:'Un logo et une charte cohérents, déclinés sur tous vos supports pour être reconnu partout.',l:['Logo & variantes','Palette & typographies','Brand board','Icônes réseaux'],im:['mycar-logo','kr-dark','spark-hive'],o:['mycar-plus','logos','logos']},
- {t:'Social media & Facebook Ads',p:'Une page animée et des campagnes ciblées, suivies au quotidien avec des chiffres concrets.',l:['Gestion & animation de pages','Campagnes notoriété / ventes','Configuration du Pixel','Rapports de performance'],im:['stats-insights','ads-d11','rocky-hny'],o:['rocky-store','rocky-store','rocky-store']},
- {t:'Édition, retouche & vidéo',p:'Ebooks mis en page, photos retouchées et montages courts pour compléter votre communication.',l:['Ebooks & magazines','Retouche & détourage','Montage vidéo','Sites WordPress'],im:['eb-winter','skin-after','agro-over'],o:['ebooks','retouche','agrofaz']}
+ {t:'Social Media Management',p:'Des pages qui vivent et une communauté qui grandit, dans la musique (artistes, sorties, événements), l’e-commerce et bien d’autres secteurs.',l:['Stratégie & calendrier éditorial','Création et publication de contenus','Animation de communauté','Reporting mensuel'],im:['rocky-hny','zed-bf2','stats-insights'],o:['rocky-store','zed','rocky-store']},
+ {t:'Digital Marketing & Ads',p:'Des campagnes Meta et Google pilotées au chiffre, du ciblage à la conversion, avec des tunnels de vente pensés pour l’e-commerce.',l:['Meta Ads & Google Ads','E-commerce marketing','Funnel building','Emailing (Mailchimp)'],im:['stats-ads','ads-d11','zed-open'],o:['rocky-store','rocky-store','zed']},
+ {t:'Web Analytics & CRM',p:'Mesurer ce qui marche vraiment : suivi des conversions, tableaux de bord et relation client.',l:['Google Analytics','Pixel Meta & conversions','HubSpot CRM','Rapports de performance'],tl:['Google Analytics','HubSpot CRM','Meta Ads Manager','Google Sheets','Hootsuite']},
+ {t:'Design & identité',p:'Logos, affiches, ebooks, retouche et vidéo : une image de marque cohérente sur tous les supports.',l:['Logos & chartes','Affiches & campagnes','Ebooks & retouche photo','Montage vidéo'],im:['mycar-logo','zed-bf1','eb-winter'],o:['mycar-plus','zed','ebooks']},
+ {t:'IoT Engineering',p:'Des objets connectés fiables, du prototype au tableau de bord : microcontrôleurs, capteurs, communication MQTT et stockage des données.',l:['Prototypage ESP32 / Arduino','Simulation (Proteus, Tinkercad)','MQTT & tableaux de bord Node-RED','APIs et bases MySQL'],tl:['Arduino IDE','PlatformIO','Node-RED','Mosquitto MQTT','MySQL','Postman']},
+ {t:'IoT Product Management',p:'Transformer une idée connectée en produit utile : cadrage, priorisation, tests utilisateurs et coordination de l’équipe.',l:['Cadrage & roadmap','Recherche et tests utilisateurs','Spécifications & suivi','Coordination d’équipe'],tl:['Notion','Trello','Figma','UserTesting','GitHub Projects','Loom']}
 ];
+const TB=[
+ {t:'Marketing & création',d:'Publicité, analytics, CRM et production visuelle.',ic:'mega',ac:true,l:['Meta Ads Manager','Meta Business Suite','Google Ads','Google Analytics','Ads Manager (réseaux sociaux)','HubSpot CRM','Mailchimp','Hootsuite','Canva','Adobe Photoshop','Adobe Illustrator','Adobe InDesign','CapCut','DaVinci Resolve','WordPress','Uizard']},
+ {t:'IoT & développement',d:'Du microcontrôleur au serveur.',ic:'cpu',l:['Arduino IDE','PlatformIO','Visual Studio Code','Proteus','Tinkercad Circuits','Node-RED','Mosquitto MQTT','MySQL','Postman','GitHub','HTML / CSS']},
+ {t:'Produit & collaboration',d:'Cadrer, tester, coordonner.',ic:'grid',l:['Notion','Trello','Figma','GitHub Projects','UserTesting','Typeform','Google Forms','Google Workspace','Google Sheets','Google Docs','Microsoft Office','Microsoft Teams','Slack','Zoom','Loom','Postman']}
+];
+const NTOOLS=new Set(TB.flatMap(x=>x.l)).size;
 const BA=[
  {a:'skin-after',b:'skin-before',sq:false,t:'Retouche beauté',p:'Photoshop : uniformisation du teint et suppression des imperfections, en conservant le grain naturel de la peau.',l:['Imperfections et grain de beauté retirés','Teint unifié sans effet « plastique »','Texture de la peau préservée']},
  {a:'dwen-v2',b:'dwen-test',sq:true,t:'Affiche D-WEN',p:'La version réalisée en entretien, puis la refonte : même message, beaucoup plus lisible et vendeur.',l:['Titre clair qui dit ce que l’on vend','Liste des produits lisible d’un coup d’œil','Produits mis en scène, bandeau d’action']}
 ];
 const FAQ=[
- ['Quels services proposez-vous ?','Design graphique (affiches, flyers, visuels réseaux), identité visuelle, gestion de pages et campagnes Facebook Ads, mise en page d’ebooks, retouche photo, montage vidéo et sites WordPress.'],
+ ['Quels services proposez-vous ?','Deux pôles. Le marketing digital : social media, publicité Meta et Google, e-commerce et funnels, analytics, design graphique. Et l’IoT : conception d’objets connectés et gestion de produit IoT.'],
+ ['Réalisez-vous des projets IoT ?','Oui : prototypage ESP32/Arduino (Arduino IDE, PlatformIO), simulation sur Proteus et Tinkercad, communication MQTT (Mosquitto), tableaux de bord Node-RED, base MySQL et APIs testées sur Postman. Côté produit : cadrage, tests utilisateurs et suivi sur Notion, Trello ou GitHub Projects.'],
+ ['Avec quels secteurs travaillez-vous ?','La musique (artistes, sorties, événements), l’e-commerce, la mode et les gadgets, l’automobile, l’alimentation… et bien d’autres.'],
  ['Comment démarrer un projet ?','Remplissez le formulaire de contact : le message part directement sur WhatsApp. On échange sur votre besoin, je vous fais une proposition, puis on lance la création.'],
  ['Combien de temps prend un projet ?','Cela dépend du livrable : une affiche se fait bien plus vite qu’une identité complète ou un site. Je vous donne un délai précis dès le brief.'],
  ['Proposez-vous des retouches ?','Oui, on ajuste le visuel ensemble jusqu’à ce qu’il corresponde à vos attentes.'],
@@ -836,7 +928,7 @@ const FAQ=[
  ['Quels sont vos tarifs ?','Chaque projet est chiffré sur devis selon le livrable et le volume. Écrivez-moi pour une estimation.'],
  ['Travaillez-vous à distance ?','Oui. Je suis basé à Abomey-Calavi et je travaille aussi avec des clients ailleurs au Bénin et à l’étranger.']
 ];
-const NEEDS=['Affiche / flyer','Logo & identité','Social media & Ads','Ebook','Retouche','Vidéo','Site web'];
+const NEEDS=['Social media','Publicité Meta / Google','E-commerce & funnel','Design & identité','Projet IoT','Produit IoT','Autre'];
 const CATS=['Tous','Branding','Print & Social','Ads','Web','Édition','Retouche','Vidéo'];
 
 $('#nProj')&&($('#nProj').dataset.n=P.length);
@@ -848,7 +940,7 @@ const pad=n=>String(n).padStart(2,'0');
 
 /* ================= RENDER ================= */
 // marquee
-const MQ=['Affiches','Identités visuelles','Facebook Ads','Social media','Retouche','Ebooks','WordPress','Montage vidéo'];
+const MQ=['IoT Engineering','Social media','Meta Ads','Product management','E-commerce','Musique','Branding','Node-RED'];
 $('#mqt').innerHTML=(MQ.map(s=>`<span>${s}</span>`).join('')).repeat(2);
 // deck
 const DCAP=['« We Are Open »','Black Friday — v1','Black Friday — v2','Black Friday — v3'];
@@ -864,12 +956,18 @@ $$('.flt').forEach(b=>b.onclick=()=>{$$('.flt').forEach(x=>x.classList.toggle('o
 const SH=[['stats-insights','Portée +2237 %'],['ads-d5','Jour 3 · 37,6K'],['ads-d11','Jour 9 · 150K'],['stats-ads','Jour 10 · 163K']];
 $('#shots').innerHTML=SH.map(s=>`<div class="shot rv"><img src="${I+s[0]}.webp" alt="${s[1]}" loading="lazy"><span>${s[1]}</span></div>`).join('');
 // services
-$('#svs').innerHTML=SV.map((s,i)=>`<div class="sv${i?'':' on'}"><button aria-expanded="${!i}"><span class="n">(${pad(i+1)})</span><h3>${s.t}</h3><span class="pm"></span></button><div class="bd"><div><div class="in"><span></span><p>${s.p}</p><ul>${s.l.map(x=>`<li>${x}</li>`).join('')}</ul><div class="thumbs">${s.im.map((m,j)=>`<img src="${I+m}.webp" alt="" loading="lazy" data-o="${s.o[j]}">`).join('')}</div></div></div></div></div>`).join('');
+$('#svs').innerHTML=SV.map((s,i)=>`<div class="sv${i?'':' on'}"><button aria-expanded="${!i}"><span class="n">(${pad(i+1)})</span><h3>${s.t}</h3><span class="pm"></span></button><div class="bd"><div><div class="in"><span></span><p>${s.p}</p><ul>${s.l.map(x=>`<li>${x}</li>`).join('')}</ul>${s.im?`<div class="thumbs">${s.im.map((m,j)=>`<img src="${I+m}.webp" alt="" loading="lazy" data-o="${s.o[j]}">`).join('')}</div>`:`<div class="stk">${s.tl.map(x=>`<span>${x}</span>`).join('')}</div>`}</div></div></div></div>`).join('');
 $$('.sv>button').forEach(b=>b.onclick=()=>{const s=b.parentElement,on=s.classList.contains('on');$$('.sv').forEach(x=>{x.classList.remove('on');x.querySelector('button').setAttribute('aria-expanded','false')});if(!on){s.classList.add('on');b.setAttribute('aria-expanded','true')}});
 // faq
 $('#faqL').innerHTML=FAQ.map((q,i)=>`<div class="qa${i?'':' on'}"><button aria-expanded="${!i}">${q[0]}<i></i></button><div class="an"><div><p>${q[1]}</p></div></div></div>`).join('');
 $$('.qa button').forEach(b=>b.onclick=()=>{const q=b.parentElement,on=q.classList.contains('on');$$('.qa').forEach(x=>{x.classList.remove('on');x.querySelector('button').setAttribute('aria-expanded','false')});if(!on){q.classList.add('on');b.setAttribute('aria-expanded','true')}});
 
+// toolbox
+$('#tbG').innerHTML=TB.map(c=>`<div class="tb rv${c.ac?' ac':''}"><div class="tbh"><span class="ic"><svg><use href="#${c.ic}"/></svg></span><span class="cnt">${pad(c.l.length)}</span></div><h3>${c.t}<small>${c.d}</small></h3><div class="ch">${c.l.map((x,i)=>`<span style="transition-delay:${(.25+i*.035).toFixed(2)}s">${x}</span>`).join('')}</div></div>`).join('');
+$('#tbTot').textContent=NTOOLS;$('#nTools').dataset.n=NTOOLS;
+// roles rotator
+(function(){const w=$('#rwi');if(!w||RM)return;const n=w.children.length;let i=0;
+  setInterval(()=>{i++;w.style.transition='';w.style.transform=`translateY(-${i*1.3}em)`;if(i===n-1)setTimeout(()=>{w.style.transition='none';w.style.transform='translateY(0)';i=0},750)},2400)})();
 /* ================= THEME ================= */
 const root=document.documentElement;
 const setMeta=()=>$('#themeColor').setAttribute('content',root.dataset.theme==='light'?'#F2F0EA':'#0B0B0B');setMeta();
@@ -970,7 +1068,14 @@ requestAnimationFrame(()=>tabTo(0));addEventListener('load',()=>tabTo([...tabs.q
 new IntersectionObserver((es,o)=>{if(!es[0].isIntersecting||RM)return;o.disconnect();spring({from:{v:50},to:{v:18},k:70,d:10,delay:.3,up:s=>setBA(s.v),done:()=>spring({from:{v:18},to:{v:50},k:70,d:12,delay:.2,up:s=>setBA(s.v)})})},{threshold:.5}).observe(ba);
 
 /* ================= ABOUT ================= */
-const ab=$('#abImg');if(!FINE){$('#abHint').textContent='touchez ✦';ab.onclick=()=>ab.classList.toggle('flip')}
+const abI=$$('#abImg img'),abB=$$('#abImg .bars i');let ai=0;
+function abGo(n){const p=ai;ai=(n+abI.length)%abI.length;abI.forEach((im,k)=>{im.classList.toggle('on',k===ai);im.classList.toggle('prev',k===p&&p!==ai)});
+  abB.forEach((b,k)=>{b.classList.remove('cur','done');void b.offsetWidth;if(k<ai)b.classList.add('done');if(k===ai)b.classList.add('cur')});$('#abC').textContent=`${pad(ai+1)} / ${pad(abI.length)}`}
+abB.forEach(b=>b.querySelector('b').addEventListener('animationend',()=>abGo(ai+1)));
+$('.ab-p0').onclick=()=>abGo(ai-1);$('.ab-n0').onclick=()=>abGo(ai+1);
+if(RM)abB.forEach(b=>b.classList.remove('cur'));
+// services poster tilt
+if(FINE&&!RM){const sp=$('#svPos');sp.addEventListener('pointermove',e=>{const r=sp.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;sp.classList.add('tilting');sp.style.setProperty('--ry',((x-.5)*10)+'deg');sp.style.setProperty('--rx',((.5-y)*8)+'deg')});sp.addEventListener('pointerleave',()=>{sp.classList.remove('tilting');sp.style.setProperty('--rx','0deg');sp.style.setProperty('--ry','0deg')})}
 
 /* ================= CONTACT ================= */
 const need=new Set();

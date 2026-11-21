@@ -70,9 +70,19 @@ button{cursor:pointer}
 .nav{position:fixed;top:14px;left:0;right:0;z-index:60;pointer-events:none;transition:transform .6s var(--ease)}
 .nav.hide{transform:translateY(-130%)}
 .nav-in{pointer-events:auto;width:min(var(--max),100% - 28px);margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 10px 0 20px;border-radius:18px;background:color-mix(in srgb,var(--bg) 72%,transparent);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid var(--line)}
-.brand{display:flex;align-items:baseline;gap:2px;font-weight:600;font-size:19px;letter-spacing:-.03em}
-.brand .it{font-size:23px;color:var(--acc)}
-.brand small{font-family:var(--mono);font-weight:400;font-size:10px;color:var(--mute);margin-left:8px;letter-spacing:.06em;align-self:center}
+.brand{display:flex;align-items:center;gap:12px;line-height:1}
+.brand .mk{position:relative;width:38px;height:38px;border-radius:12px;background:var(--acc);color:#fff;display:grid;place-items:center;overflow:hidden;flex:none;transition:border-radius .6s var(--ease),transform .6s var(--ease)}
+.brand .mk span{position:absolute;font-family:var(--serif);font-style:italic;font-size:22px;transition:transform .6s var(--ease)}
+.brand .mk span:last-child{font-family:var(--sans);font-style:normal;font-weight:700;font-size:15px;letter-spacing:-.04em;transform:translateY(160%)}
+.brand:hover .mk{border-radius:50%;transform:rotate(-8deg)}
+.brand:hover .mk span:first-child{transform:translateY(-160%)}
+.brand:hover .mk span:last-child{transform:none}
+.brand .nm{display:flex;align-items:baseline;gap:6px;white-space:nowrap}
+.brand .fn{font-weight:600;font-size:18px;letter-spacing:-.035em}
+.brand .ln2{font-size:21px;color:var(--ink2)}
+.brand .rl{font-family:var(--mono);font-size:9.5px;line-height:1.25;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);padding-left:12px;border-left:1px solid var(--line2)}
+@media (max-width:1180px){.brand .rl{display:none}}
+@media (max-width:420px){.brand .fn{font-size:16px}.brand .ln2{font-size:18px}.brand .mk{width:34px;height:34px}}
 .nlinks{display:flex;gap:2px}
 .nlinks a{position:relative;padding:8px 13px;border-radius:10px;font-size:14px;color:var(--mute);transition:color .3s,background .3s}
 .nlinks a:hover{color:var(--ink)}
@@ -131,7 +141,7 @@ button{cursor:pointer}
 .hero .sub{max-width:560px;margin-top:30px;font-size:clamp(16px,1.35vw,19px);color:var(--mute)}
 .hero .sub b{color:var(--ink);font-weight:500}
 .hero .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
-.deck{position:relative;height:min(620px,64vh);aspect-ratio:.82;justify-self:center;margin-right:4%}
+.deck{position:relative;height:min(620px,64vh);aspect-ratio:.72;justify-self:center;margin-right:4%}
 .dk{position:absolute;inset:0;border-radius:22px;overflow:hidden;background:var(--surf);box-shadow:var(--shadow);cursor:pointer;transition:transform 1s var(--ease),filter .8s,opacity .8s;will-change:transform;border:1px solid var(--line)}
 .dk img{width:100%;height:100%;object-fit:cover;filter:var(--img)}
 .dk .cap{position:absolute;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;align-items:center;padding:11px 14px;border-radius:14px;background:color-mix(in srgb,var(--bg) 70%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);font-size:14px;font-weight:500;opacity:0;transform:translateY(8px);transition:.6s var(--ease)}
@@ -389,7 +399,7 @@ button{cursor:pointer}
    FOOTER
    ========================================================= */
 .ft{padding:60px 0 30px}
-.ft-big{font-size:clamp(64px,17vw,290px);line-height:.8;letter-spacing:-.07em;font-weight:600;white-space:nowrap;text-align:center;user-select:none;margin-bottom:30px}
+.ft-big{font-size:clamp(40px,11.2vw,190px);line-height:.8;letter-spacing:-.07em;font-weight:600;white-space:nowrap;text-align:center;user-select:none;margin-bottom:30px}
 .ft-big .it{font-weight:400;color:var(--acc);letter-spacing:-.04em}
 .ft-r{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--mute);border-top:1px solid var(--line);padding-top:22px}
 .ft-r a:hover{color:var(--ink)}
@@ -417,7 +427,7 @@ button{cursor:pointer}
 .md-meta div{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line);font-size:14.5px}
 .md-meta small{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute)}
 .md-cv{border-radius:24px;overflow:hidden;margin:40px 0;background:var(--surf);border:1px solid var(--line);max-height:620px}
-.md-cv img,.md-cv video{width:100%;max-height:620px;object-fit:cover;animation:cv 1.5s var(--ease)}
+.md-cv img,.md-cv video{width:100%;max-height:620px;object-fit:cover;object-position:50% 15%;animation:cv 1.5s var(--ease)}
 @keyframes cv{from{transform:scale(1.12);filter:blur(6px)}}
 .md-bd{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;margin-bottom:46px}
 .md-bd h4{font-size:24px;font-weight:500;letter-spacing:-.03em}
@@ -459,7 +469,7 @@ button{cursor:pointer}
    ========================================================= */
 @media (max-width:1100px){
   .hero-g{grid-template-columns:1fr}
-  .deck{height:auto;width:min(420px,78vw);margin:10px auto 0;aspect-ratio:.82}
+  .deck{height:auto;width:min(420px,78vw);margin:10px auto 0;aspect-ratio:.72}
   .res-g,.ba-g,.ab-g,.faq-g,.ct-g,.md-top,.md-bd{grid-template-columns:1fr}
   .ab-img{position:relative;top:0;max-width:520px}
   .ba.sq{margin:0 auto}
@@ -534,7 +544,7 @@ button{cursor:pointer}
 <!-- ================= NAV ================= -->
 <header class="nav" id="nav">
   <div class="nav-in">
-    <a href="#top" class="brand" data-go aria-label="Accueil">josé<span class="it">—</span>créa<small>®2026</small></a>
+    <a href="#top" class="brand" data-go aria-label="José Gnimagnon — accueil"><span class="mk" aria-hidden="true"><span>J</span><span>G</span></span><span class="nm"><span class="fn">José</span><span class="ln2 it">Gnimagnon</span></span><span class="rl" aria-hidden="true">Design<br>&amp; Marketing</span></a>
     <nav class="nlinks" id="nl">
       <a href="#travaux" data-go data-s="travaux">Travaux</a>
       <a href="#resultats" data-go data-s="resultats">Résultats</a>
@@ -567,12 +577,12 @@ button{cursor:pointer}
       <p class="sub rv">Je suis <b>José Gnimagnon</b>, Digital Marketer &amp; Graphic Designer. Identités visuelles, affiches, gestion de pages et campagnes Facebook Ads : je crée pour que votre marque se voie, et je mesure pour qu’elle vende.</p>
       <div class="btns rv"><a href="#travaux" class="btn btn-a" data-go data-mag><span class="lb"><span>Voir les travaux</span><span>Voir les travaux</span></span><svg><use href="#ar"/></svg></a><a href="#contact" class="btn btn-o" data-go data-mag><span class="lb"><span>Me contacter</span><span>Me contacter</span></span></a></div>
     </div>
-    <div class="deck rv" id="deck" aria-label="Aperçu des projets"><span class="deck-n" id="deckN">01 / 06</span></div>
+    <div class="deck rv" id="deck" aria-label="Aperçu des projets"><span class="deck-n" id="deckN">01 / 07</span></div>
   </div>
   <div class="hero-b rv">
     <div class="hb"><b data-n="163" data-s="K">0</b><span>personnes atteintes par une campagne</span></div>
     <div class="hb"><b>+<span data-n="2237">0</span> %</b><span>de portée sur une page en 28 jours</span></div>
-    <div class="hb"><b data-n="11">0</b><span>projets présentés</span></div>
+    <div class="hb"><b data-n="12" id="nProj">0</b><span>projets présentés</span></div>
     <div class="hb"><b class="it">Photoshop</b><span>Illustrator · InDesign · WordPress</span></div>
   </div>
 </section>
@@ -725,7 +735,7 @@ button{cursor:pointer}
 </main>
 
 <footer class="ft wrap">
-  <div class="ft-big" aria-hidden="true">josé<span class="it">créa</span></div>
+  <div class="ft-big" aria-hidden="true">José <span class="it">Gnimagnon</span></div>
   <div class="ft-r">
     <span>© 2026 José Gnimagnon — Abomey-Calavi, Bénin</span>
     <div class="soc"><a href="https://wa.me/2290197857633" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.linkedin.com/in/jos%C3%A9-gnimagnon-300408289" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:josegnimagnon777@gmail.com">E-mail</a></div>
@@ -759,6 +769,10 @@ const P=[
   pts:['Logo « Rocky Store » et couverture de page','Série d’affiches produits à la charte jaune et noire','Visuels saisonniers « Happy New Year 2025 »','Animation vidéo d’un produit','Campagne Facebook « BJ – H/F » : ciblage, visuels, suivi quotidien'],
   kpis:[['163K','personnes atteintes en 10 jours'],['0,04 $','pour 1 000 personnes'],['+2237 %','portée de la page sur 28 jours'],['+130 %','interactions sur le contenu']],
   g:['rocky-logo','rocky-wifi','rocky-wifi-usb','rocky-bt','rocky-bt-pc','rocky-alfa','v:rocky-mouse','rocky-aux','rocky-usbc','rocky-usb','rocky-usb2','rocky-repeteur','rocky-bt2','rocky-hny','rocky-hny2','rocky-hny3','ads-cover','stats-insights','ads-d5','ads-d11','stats-ads']},
+ {id:'zed',t:'ZED Accessories',c:'Print & Social',cl:'Affiches & campagne Black Friday',tools:'Photoshop',cover:'zed-open',sq:'zed-bf2',year:'2026',client:'ZED Accessories (gadgets & mode)',role:'Affiches réseaux sociaux',
+  intro:'ZED Accessories, boutique de gadgets et de mode à Abomey-Calavi et Cotonou : achat, vente et échange de smartphones et consoles, vêtements et accessoires. Affiche d’ouverture, puis une campagne Black Friday déclinée en trois directions artistiques.',
+  pts:['Affiche « We Are Open » : We Buy / We Sell / We Swap, QR code WhatsApp','Black Friday v1 : typographie géante rouge, mannequin détouré','Black Friday v2 : composition verticale, pastille −20 %, QR code','Black Friday v3 : fond acide, esthétique caméra « REC », bandeau défilant'],
+  g:['zed-open','zed-bf1','zed-bf2','zed-bf3']},
  {id:'mycar-plus',t:'MyCar Plus',c:'Branding',cl:'Identité de marque',tools:'Illustrator',cover:'mycar-kit',sq:'mycar-logo',year:'2025',client:'MyCar Plus',role:'Logo, déclinaisons, brand board',
   intro:'Entreprise d’import de véhicules depuis les États-Unis vers le Bénin. Objectif : une identité premium et cinématographique, déclinable sur les réseaux sociaux.',
   pts:['Logo « MYCAR+ » et signature « Import • Conseil • Livraison »','Version minimaliste et icône pour les réseaux','Brand kit : palette, bannières, publications','Exploration de plusieurs concepts'],
@@ -801,10 +815,10 @@ const P=[
   g:['v:sneakers','v:traffic','v:rocky-mouse']}
 ];
 const FEAT=['rocky-store','mycar-plus','d-wen','retouche','ebooks'];
-const DECK=['rocky-wifi','mycar-logo','dwen-v2','youssi-2','eb-artsed','fruinas-affiche'];
-const DECKID=['rocky-store','mycar-plus','d-wen','youssi','ebooks','fruinas'];
+const DECK=['zed-open','zed-bf1','zed-bf2','zed-bf3','mycar-logo','eb-artsed','fruinas-affiche'];
+const DECKID=['zed','zed','zed','zed','mycar-plus','ebooks','fruinas'];
 const SV=[
- {t:'Design graphique',p:'Des visuels qui attirent l’œil et font comprendre l’offre en une seconde, prêts à publier ou à imprimer.',l:['Affiches produits & promos','Flyers, dépliants','Visuels réseaux sociaux','Couvertures de pages'],im:['rocky-wifi','youssi-1','fruinas-affiche'],o:['rocky-store','youssi','fruinas']},
+ {t:'Design graphique',p:'Des visuels qui attirent l’œil et font comprendre l’offre en une seconde, prêts à publier ou à imprimer.',l:['Affiches produits & promos','Campagnes saisonnières (Black Friday…)','Visuels réseaux sociaux','Couvertures de pages'],im:['zed-bf2','rocky-wifi','fruinas-affiche'],o:['zed','rocky-store','fruinas']},
  {t:'Identité visuelle',p:'Un logo et une charte cohérents, déclinés sur tous vos supports pour être reconnu partout.',l:['Logo & variantes','Palette & typographies','Brand board','Icônes réseaux'],im:['mycar-logo','kr-dark','spark-hive'],o:['mycar-plus','logos','logos']},
  {t:'Social media & Facebook Ads',p:'Une page animée et des campagnes ciblées, suivies au quotidien avec des chiffres concrets.',l:['Gestion & animation de pages','Campagnes notoriété / ventes','Configuration du Pixel','Rapports de performance'],im:['stats-insights','ads-d11','rocky-hny'],o:['rocky-store','rocky-store','rocky-store']},
  {t:'Édition, retouche & vidéo',p:'Ebooks mis en page, photos retouchées et montages courts pour compléter votre communication.',l:['Ebooks & magazines','Retouche & détourage','Montage vidéo','Sites WordPress'],im:['eb-winter','skin-after','agro-over'],o:['ebooks','retouche','agrofaz']}
@@ -825,6 +839,7 @@ const FAQ=[
 const NEEDS=['Affiche / flyer','Logo & identité','Social media & Ads','Ebook','Retouche','Vidéo','Site web'];
 const CATS=['Tous','Branding','Print & Social','Ads','Web','Édition','Retouche','Vidéo'];
 
+$('#nProj')&&($('#nProj').dataset.n=P.length);
 /* ================= HELPERS ================= */
 const img=k=>k.startsWith('v:')?`${I}poster-${k.slice(2)}.webp`:`${I+k}.webp`;
 const med=(k,lazy=true)=>k.startsWith('v:')?`<video src="${V+k.slice(2)}.mp4" poster="${I}poster-${k.slice(2)}.webp" muted loop playsinline autoplay preload="metadata"></video>`:`<img src="${I+k}.webp" alt="" ${lazy?'loading="lazy"':''}>`;
@@ -836,7 +851,8 @@ const pad=n=>String(n).padStart(2,'0');
 const MQ=['Affiches','Identités visuelles','Facebook Ads','Social media','Retouche','Ebooks','WordPress','Montage vidéo'];
 $('#mqt').innerHTML=(MQ.map(s=>`<span>${s}</span>`).join('')).repeat(2);
 // deck
-$('#deck').insertAdjacentHTML('beforeend',DECK.map((k,i)=>`<div class="dk" data-o="${DECKID[i]}"><img src="${I+k}.webp" alt="" ${i>1?'loading="lazy"':''}><div class="cap">${P.find(p=>p.id===DECKID[i]).t}<span>${P.find(p=>p.id===DECKID[i]).cl}</span></div></div>`).join(''));
+const DCAP=['« We Are Open »','Black Friday — v1','Black Friday — v2','Black Friday — v3'];
+$('#deck').insertAdjacentHTML('beforeend',DECK.map((k,i)=>{const p=P.find(x=>x.id===DECKID[i]);return `<div class="dk" data-o="${p.id}"><img src="${I+k}.webp" alt="${p.t}" ${i>1?'loading="lazy"':''}><div class="cap">${p.t}<span>${DCAP[i]||p.cl}</span></div></div>`}).join(''));
 // horizontal
 $('#hsT').innerHTML=FEAT.map((id,i)=>{const p=P.find(x=>x.id===id);return `<article class="wk" data-o="${p.id}"><div class="im">${med(p.cover,i>1)}<span class="num">${pad(i+1)}</span><span class="go"><svg><use href="#ar"/></svg></span></div><div class="meta"><h3>${p.t}</h3><span>${p.cl}<br>${p.year}</span></div></article>`}).join('')+`<div class="wk-end"><p>Et <span class="it acc">${P.length-FEAT.length} autres</span> projets à découvrir.</p><a href="#index" class="btn btn-o" data-go style="align-self:flex-start">${lbl('Voir l’index complet')}<svg><use href="#ar"/></svg></a></div>`;
 // filters + index
@@ -893,7 +909,7 @@ $$('.kpis,.pr,.shots,.tools').forEach(g=>[...g.children].forEach((c,i)=>c.style.
 setTimeout(()=>$('#hero').classList.add('go'),RM?0:120);
 $$('.hero h1 .ln>span').forEach((s,i)=>s.style.transitionDelay=(.1+i*.1)+'s');
 const dks=$$('.dk');let ord=dks.map((_,i)=>i),paused=false,mx=0,my=0;
-const POS=[[0,0,-3,1],[42,26,5,.94],[-34,46,-9,.88],[10,64,8,.82],[0,74,0,.78],[0,80,0,.75]];
+const POS=[[0,0,-3,1],[42,26,5,.94],[-34,46,-9,.88],[10,64,8,.82],[0,74,0,.78],[0,80,0,.75],[0,84,0,.72]];
 function layDeck(){ord.forEach((di,pos)=>{const d=dks[di],p=POS[Math.min(pos,POS.length-1)];
   const tx=p[0]+(pos===0?mx*18:mx*(6+pos*4)),ty=p[1]+(pos===0?my*12:my*(4+pos*2)),rot=p[2]+(pos===0?mx*4:0);
   d.style.zIndex=10-pos;d.classList.toggle('top',pos===0);d.style.transform=`translate3d(${tx}px,${ty}px,0) rotate(${rot}deg) scale(${p[3]})`;d.style.filter=pos?`brightness(${1-pos*.12})`:'';d.style.opacity=pos>3?0:1})}

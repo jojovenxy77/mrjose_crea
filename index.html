@@ -13,7 +13,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://mrjose-crea.vercel.app/">
 <meta name="theme-color" content="#0B0B0B" id="themeColor">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%23111'/%3E%3Cg fill='none' stroke='%23F1EFE9' stroke-width='3.2' stroke-linecap='round'%3E%3Cpath d='M29.2 10.8A13 13 0 1 0 33 20H21'/%3E%3Cpath d='M25.3 14.7A7.5 7.5 0 1 0 27.5 20'/%3E%3C/g%3E%3Ccircle cx='20' cy='20' r='3' fill='%23FF4D1A'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<link rel="apple-touch-icon" href="assets/img/favicon.png">
 <script>(function(){var t;try{t=localStorage.getItem('jg-theme')}catch(e){}if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.setAttribute('data-theme',t)})()</script>
 <link rel="preload" href="assets/fonts/bricolage.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
@@ -77,21 +78,18 @@ h1,h2,.ft-big,.md-in h2{font-weight:600}
 .nav{position:fixed;top:14px;left:0;right:0;z-index:60;pointer-events:none;transition:transform .6s var(--ease)}
 .nav.hide{transform:translateY(-130%)}
 .nav-in{pointer-events:auto;width:min(var(--max),100% - 28px);margin:0 auto;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 10px 0 20px;border-radius:18px;background:color-mix(in srgb,var(--bg) 72%,transparent);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:11px;line-height:1}
-.brand .mk{width:42px;height:42px;border-radius:13px;background:var(--ink);color:var(--bg);display:grid;place-items:center;flex:none;transition:border-radius .6s var(--ease),transform .6s var(--ease)}
-.brand .mk svg{width:30px;height:30px;overflow:visible}
-.brand .mk .a{fill:none;stroke:currentColor;stroke-width:3.2;stroke-linecap:round}
-.brand .mk .a2{stroke-dasharray:40;stroke-dashoffset:0;transition:stroke-dashoffset .9s var(--ease)}
-.brand .mk .d{fill:var(--acc);transform-box:fill-box;transform-origin:center;transition:transform .5s var(--ease)}
-.brand:hover .mk{border-radius:50%;transform:rotate(-12deg)}
-.brand:hover .mk .a2{animation:sig 1.4s var(--ease) infinite}
-.brand:hover .mk .d{transform:scale(1.35)}
-@keyframes sig{0%{stroke-dashoffset:40}60%,100%{stroke-dashoffset:0}}
-.brand .nm{display:flex;flex-direction:column;gap:1px}
-.brand .fn{font-family:var(--serif);font-style:italic;font-size:16px;line-height:1;color:var(--acc);letter-spacing:-.01em}
-.brand .ln2{font-family:var(--disp);font-weight:700;font-size:19px;line-height:.95;letter-spacing:-.04em}
+.brand{display:flex;align-items:center;gap:12px;line-height:1}
+.lg{position:relative;display:block;height:46px;aspect-ratio:611/335;flex:none;margin:-4px 0 -2px}
+.lg i{position:absolute;inset:0;-webkit-mask:var(--m) left center/contain no-repeat;mask:var(--m) left center/contain no-repeat}
+.lg .k{--m:url(assets/img/logo-ink.png);background:var(--ink);clip-path:inset(0 0 0 0);transition:clip-path 1.4s cubic-bezier(.65,0,.35,1)}
+.lg .r{--m:url(assets/img/logo-red.png);background:var(--acc);clip-path:inset(0 0 0 0);transition:clip-path .8s cubic-bezier(.65,0,.35,1) .9s}
+.js .brand:not(.signed) .lg .k,.js .brand:not(.signed) .lg .r{clip-path:inset(0 100% 0 0)}
+.brand:hover .lg .r{animation:swoosh 1s cubic-bezier(.65,0,.35,1)}
+@keyframes swoosh{0%{clip-path:inset(0 100% 0 0)}100%{clip-path:inset(0 0 0 0)}}
+.brand .gn{font-family:var(--lab);font-stretch:112%;font-weight:500;font-size:11px;letter-spacing:.42em;text-transform:uppercase;padding-top:14px;margin-left:-6px}
 .brand .rl{font-family:var(--lab);font-stretch:125%;font-weight:600;font-size:8.5px;line-height:1.35;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding-left:12px;margin-left:2px;border-left:1px solid var(--line2)}
 @media (max-width:1180px){.brand .rl{display:none}}
+@media (max-width:400px){.brand .gn{display:none}}
 .nlinks{display:flex;gap:2px}
 .nlinks a{position:relative;padding:8px 13px;border-radius:10px;font-size:14px;color:var(--mute);transition:color .3s,background .3s}
 .nlinks a:hover{color:var(--ink)}
@@ -457,6 +455,11 @@ h1,h2,.ft-big,.md-in h2{font-weight:600}
 .ft{padding:60px 0 30px}
 .ft-big{font-size:clamp(40px,11.2vw,190px);line-height:.8;letter-spacing:-.07em;font-weight:600;white-space:nowrap;text-align:center;user-select:none;margin-bottom:30px}
 .ft-big .it{font-weight:400;color:var(--acc);letter-spacing:-.04em}
+.ft-logo{position:relative;width:min(820px,88%);aspect-ratio:613/333;margin:10px auto 40px}
+.ft-logo i{position:absolute;inset:0;-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat;transition:clip-path 1.8s cubic-bezier(.65,0,.35,1)}
+.ft-logo .k{--m:url(assets/img/logo-full-ink.png);background:var(--ink)}
+.ft-logo .r{--m:url(assets/img/logo-full-red.png);background:var(--acc);transition-delay:1.2s}
+.js .ft-logo:not(.in) i{clip-path:inset(0 100% 0 0)}
 .ft-r{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--mute);border-top:1px solid var(--line);padding-top:22px}
 .ft-r a:hover{color:var(--ink)}
 .soc{display:flex;gap:18px}
@@ -614,7 +617,7 @@ h1,h2,.ft-big,.md-in h2{font-weight:600}
 <!-- ================= NAV ================= -->
 <header class="nav" id="nav">
   <div class="nav-in">
-    <a href="#top" class="brand" data-go aria-label="José Gnimagnon — accueil"><span class="mk" aria-hidden="true"><svg viewBox="0 0 40 40"><path class="a" d="M29.2 10.8A13 13 0 1 0 33 20H21"/><path class="a a2" d="M25.3 14.7A7.5 7.5 0 1 0 27.5 20"/><circle class="d" cx="20" cy="20" r="3"/></svg></span><span class="nm"><span class="fn">José</span><span class="ln2">Gnimagnon</span></span><span class="rl" aria-hidden="true">IoT Engineer<br>&amp; Marketer</span></a>
+    <a href="#top" class="brand" data-go aria-label="José Gnimagnon — accueil"><span class="lg" role="img" aria-label="José Gnimagnon"><i class="k"></i><i class="r"></i></span><span class="gn" aria-hidden="true">Gnimagnon</span><span class="rl" aria-hidden="true">IoT Engineer<br>&amp; Marketer</span></a>
     <nav class="nlinks" id="nl">
       <a href="#travaux" data-go data-s="travaux">Travaux</a>
       <a href="#resultats" data-go data-s="resultats">Résultats</a>
@@ -746,12 +749,11 @@ h1,h2,.ft-big,.md-in h2{font-weight:600}
   <div class="sh"><span class="no">(05)</span><h2 class="rv">À <span class="it">propos</span></h2><p class="rv">IoT, produit, marketing digital et social media : deux mondes que je relie.</p></div>
   <div class="ab-g">
     <div class="ab-img" id="abImg">
-      <div class="bars" aria-hidden="true"><i class="cur"><b></b></i><i><b></b></i><i><b></b></i></div>
-      <img class="on" src="assets/img/jose-photo.webp" alt="José Gnimagnon">
-      <img src="assets/img/jose-portrait.webp" alt="José Gnimagnon, portrait" loading="lazy">
+      <div class="bars" aria-hidden="true"><i><b></b></i><i><b></b></i></div>
+      <img class="on" src="assets/img/jose-portrait.webp" alt="José Gnimagnon, portrait">
       <img src="assets/img/jose-ghibli.webp" alt="Portrait illustré de José" loading="lazy">
       <button class="abn ab-p0" aria-label="Photo précédente"></button><button class="abn ab-n0" aria-label="Photo suivante"></button>
-      <div class="tag"><b>José Gnimagnon</b><span id="abC">01 / 03</span></div>
+      <div class="tag"><b>José Gnimagnon</b><span id="abC">01 / 02</span></div>
     </div>
     <div>
       <p class="ab-lead rv">Deux métiers, une même obsession : des <span class="it">résultats</span> qu’on peut mesurer, qu’il s’agisse d’un capteur connecté ou d’une campagne <span class="it">publicitaire</span>.</p>
@@ -817,7 +819,7 @@ h1,h2,.ft-big,.md-in h2{font-weight:600}
 </main>
 
 <footer class="ft wrap">
-  <div class="ft-big" aria-hidden="true">José <span class="it">Gnimagnon</span></div>
+  <div class="ft-logo" role="img" aria-label="José Gnimagnon"><i class="k"></i><i class="r"></i></div>
   <div class="ft-r">
     <span>© 2026 José Gnimagnon — Abomey-Calavi, Bénin</span>
     <div class="soc"><a href="https://wa.me/2290197857633" target="_blank" rel="noopener">WhatsApp</a><a href="https://www.linkedin.com/in/jos%C3%A9-gnimagnon-300408289" target="_blank" rel="noopener">LinkedIn</a><a href="mailto:josegnimagnon777@gmail.com">E-mail</a></div>
@@ -968,6 +970,8 @@ $('#tbTot').textContent=NTOOLS;$('#nTools').dataset.n=NTOOLS;
 // roles rotator
 (function(){const w=$('#rwi');if(!w||RM)return;const n=w.children.length;let i=0;
   setInterval(()=>{i++;w.style.transition='';w.style.transform=`translateY(-${i*1.3}em)`;if(i===n-1)setTimeout(()=>{w.style.transition='none';w.style.transform='translateY(0)';i=0},750)},2400)})();
+setTimeout(()=>$('.brand').classList.add('signed'),RM?0:350);
+new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){es[0].target.classList.add('in');o.disconnect()}},{threshold:.35}).observe($('.ft-logo'));
 /* ================= THEME ================= */
 const root=document.documentElement;
 const setMeta=()=>$('#themeColor').setAttribute('content',root.dataset.theme==='light'?'#F2F0EA':'#0B0B0B');setMeta();
@@ -1073,7 +1077,7 @@ function abGo(n){const p=ai;ai=(n+abI.length)%abI.length;abI.forEach((im,k)=>{im
   abB.forEach((b,k)=>{b.classList.remove('cur','done');void b.offsetWidth;if(k<ai)b.classList.add('done');if(k===ai)b.classList.add('cur')});$('#abC').textContent=`${pad(ai+1)} / ${pad(abI.length)}`}
 abB.forEach(b=>b.querySelector('b').addEventListener('animationend',()=>abGo(ai+1)));
 $('.ab-p0').onclick=()=>abGo(ai-1);$('.ab-n0').onclick=()=>abGo(ai+1);
-if(RM)abB.forEach(b=>b.classList.remove('cur'));
+if(!RM)new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();abB[0].classList.add('cur')}},{threshold:.4}).observe($('#abImg'));
 // services poster tilt
 if(FINE&&!RM){const sp=$('#svPos');sp.addEventListener('pointermove',e=>{const r=sp.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;sp.classList.add('tilting');sp.style.setProperty('--ry',((x-.5)*10)+'deg');sp.style.setProperty('--rx',((.5-y)*8)+'deg')});sp.addEventListener('pointerleave',()=>{sp.classList.remove('tilting');sp.style.setProperty('--rx','0deg');sp.style.setProperty('--ry','0deg')})}
 
